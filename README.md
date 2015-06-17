@@ -28,7 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?php echo Chart::widget([
+<?php echo \yii2mod\c3\chart\Chart::widget([
     'options' => [
             'id' => 'popularity_chart'
     ],
