@@ -1,4 +1,5 @@
-# yii2-c3-chart
+C3 Chart generator
+===============================================
 Yii2 wrapper for D3-based reusable chart library
 
 Installation
