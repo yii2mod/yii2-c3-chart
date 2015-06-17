@@ -2,7 +2,7 @@ C3 Chart generator
 ===============================================
 Yii2 wrapper for D3-based reusable chart library
 
-Installation
+Installation 
 ------------
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
