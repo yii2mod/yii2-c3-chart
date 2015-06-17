@@ -3,7 +3,7 @@
     "description": "Yii2 wrapper for D3-based reusable chart library",
     "type": "yii2-extension",
     "keywords": ["yii2", "module"],
-    "license": "Apache-2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Igor Chepurnoy",
