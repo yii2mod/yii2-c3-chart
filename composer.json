@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-            "yii2mod/yii2-pie": "1.0.*"
+            "yii2mod/yii2-pie": "*"
     },
     "autoload": {
         "psr-4": {
