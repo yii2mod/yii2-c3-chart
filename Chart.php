@@ -67,13 +67,14 @@ class Chart extends Widget
     protected function getClientOptions()
     {
         $id = $this->options['id'];
-        return ArrayHelper::merge($this->clientOptions, [
-            'bindto' => '#' . $id,
-            'size' => [
+        $this->clientOptions['bindto'] = '#' . $id;
+        if (!isset($this->clientOptions['size'])) {
+            $this->clientOptions['size'] = [
                 'width' => $this->width,
                 'height' => $this->height
-            ]
-        ]);
+            ];
+        }
+        return $this->clientOptions;
     }
 
 }
