@@ -25,18 +25,6 @@ use yii\helpers\Json;
 class Chart extends Widget
 {
     /**
-     * @var int The desired width of the chart element.
-     * If this option is not specified, the width of the chart will be calculated by the size of the parent element it's appended to
-     */
-    public $width = 480;
-
-    /**
-     * @var int The desired height of the chart element.
-     * If this option is not specified, the height of the chart will be calculated by the size of the parent element it's appended to.
-     */
-    public $height = 240;
-
-    /**
      * Executes the widget.
      * @return string the result of widget execution to be outputted.
      */
@@ -68,12 +56,6 @@ class Chart extends Widget
     {
         $id = $this->options['id'];
         $this->clientOptions['bindto'] = '#' . $id;
-        if (!isset($this->clientOptions['size'])) {
-            $this->clientOptions['size'] = [
-                'width' => $this->width,
-                'height' => $this->height
-            ];
-        }
         return $this->clientOptions;
     }
 
