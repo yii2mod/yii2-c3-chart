@@ -4,7 +4,6 @@ namespace yii2mod\c3\chart;
 
 use Yii;
 use yii\bootstrap\Widget;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
