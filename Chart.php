@@ -2,30 +2,29 @@
 
 namespace yii2mod\c3\chart;
 
-use Yii;
 use yii\bootstrap\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
 /**
- * Yii wrapper for D3-based reusable chart library `c3`
- * ~~~
- *      echo \app\widgets\chart\Chart::widget([
- *        'clientOptions' => [
- *              'data' => [
- *                   'columns' => [
- *                      ['data2', 130, 300, 200, 300, 250, 450]
- *                    ]
+ * Yii2 wrapper for D3-based reusable chart library `c3`. You can generate chart as following:
+ *
+ * ```php
+ * echo \yii2mod\c3\chart\Chart::widget([
+ *      'clientOptions' => [
+ *          'data' => [
+ *              'columns' => [
+ *                  ['data2', 130, 300, 200, 300, 250, 450]
  *              ]
- *        ]
- *     ])
- * ~~~
+ *           ]
+ *       ]
+ * ]);
+ * ```
  */
 class Chart extends Widget
 {
     /**
-     * Executes the widget.
-     * @return string the result of widget execution to be outputted.
+     * @inheritdoc
      */
     public function run()
     {
@@ -36,26 +35,27 @@ class Chart extends Widget
 
     /**
      * Register assets
+     *
+     * @return void
      */
     protected function registerAssets()
     {
         $id = $this->options['id'];
         $view = $this->getView();
         ChartAsset::register($view);
-        $options = Json::encode($this->getClientOptions());
-        $view->registerJs("var {$id} = c3.generate({$options});", $view::POS_END);
+        $view->registerJs("var {$id} = c3.generate({$this->getClientOptions()});", $view::POS_END);
     }
 
 
     /**
-     * Get client options
+     * Get client options in the json format
+     *
      * @return string
      */
     protected function getClientOptions()
     {
-        $id = $this->options['id'];
-        $this->clientOptions['bindto'] = '#' . $id;
-        return $this->clientOptions;
-    }
+        $this->clientOptions['bindto'] = '#' . $this->options['id'];
 
+        return Json::encode($this->clientOptions);
+    }
 }
