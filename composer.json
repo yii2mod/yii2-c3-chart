@@ -19,6 +19,9 @@
         "yiisoft/yii2-bootstrap": "*",
         "bower-asset/c3": "*"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0"
+    },
     "autoload": {
         "psr-4": {
             "yii2mod\\c3\\chart\\": ""

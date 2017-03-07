@@ -28,15 +28,13 @@ class Chart extends Widget
      */
     public function run()
     {
-        echo Html::tag('div', '', ['id' => $this->options['id']]);
         $this->registerAssets();
-        parent::run();
+
+        return Html::tag('div', '', ['id' => $this->options['id']]);
     }
 
     /**
      * Register assets
-     *
-     * @return void
      */
     protected function registerAssets()
     {
@@ -45,7 +43,6 @@ class Chart extends Widget
         ChartAsset::register($view);
         $view->registerJs("var {$id} = c3.generate({$this->getClientOptions()});", $view::POS_END);
     }
-
 
     /**
      * Get client options in the json format
