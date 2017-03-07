@@ -17,7 +17,6 @@
     "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "yii2mod/yii2-pie": "*",
         "bower-asset/c3": "*"
     },
     "autoload": {
