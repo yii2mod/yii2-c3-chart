@@ -28,11 +28,4 @@ class ChartAsset extends AssetBundle
     public $css = [
         'c3.min.css'
     ];
-
-    /**
-     * @var array list of bundle class names that this bundle depends on.
-     */
-    public $depends = [
-        'yii2mod\pie\PieAsset'
-    ];
 }
