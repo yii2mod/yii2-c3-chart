@@ -7,19 +7,9 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 
 /**
- * Yii2 wrapper for D3-based reusable chart library `c3`. You can generate chart as following:
+ * Class Chart
  *
- * ```php
- * echo \yii2mod\c3\chart\Chart::widget([
- *      'clientOptions' => [
- *          'data' => [
- *              'columns' => [
- *                  ['data2', 130, 300, 200, 300, 250, 450]
- *              ]
- *           ]
- *       ]
- * ]);
- * ```
+ * @package yii2mod\c3\chart
  */
 class Chart extends Widget
 {

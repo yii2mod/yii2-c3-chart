@@ -1,5 +1,11 @@
-C3 Chart generator
-===============================================
+<p align="center">
+    <a href="https://github.com/yiisoft" target="_blank">
+        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    </a>
+    <h1 align="center">Yii2 Chart Widget</h1>
+    <br>
+</p>
+
 Yii2 wrapper for D3-based reusable chart library
 
 [![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-c3-chart/v/stable)](https://packagist.org/packages/yii2mod/yii2-c3-chart) [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-c3-chart/downloads)](https://packagist.org/packages/yii2mod/yii2-c3-chart) [![License](https://poser.pugx.org/yii2mod/yii2-c3-chart/license)](https://packagist.org/packages/yii2mod/yii2-c3-chart)
